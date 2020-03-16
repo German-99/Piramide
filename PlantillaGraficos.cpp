@@ -21,13 +21,17 @@ using namespace std;
 
 //Cada elemento que queramos renderear necesita un vertex array y un buffer
 vector<Vertice> triangulo;
-GLuint vertexArrayTriangulo;
 GLuint vertexArrayTrianguloID;
 GLuint bufferTrianguloID;
 
 vector<Vertice> cuadrado;
 GLuint vertexArrayCuadradoID;
 GLuint bufferCuadradoID;
+
+
+vector<Vertice> circulo;
+GLuint vertexArrayCirculoID;
+GLuint bufferCirculoID;
 
 //Instancia del shader
 Shader *shader;
@@ -40,161 +44,179 @@ void inicializarCuadrado() {
 	//Primer cuadrado
 	Vertice v1 = {
 		vec3(-0.9f,-0.4f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v2 = {
 		vec3(0.9f,-0.4f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v3 = {
 		vec3(0.9f,-0.5f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v4 = {
 		vec3(-0.9f,-0.5f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	//segundo cuadrado
 	Vertice v5 = {
 		vec3(-0.8f,-0.3f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v6 = {
 		vec3(0.8f,-0.3f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v7 = {
 		vec3(0.8f,-0.4f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v8 = {
 		vec3(-0.8f,-0.4f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 
 	//tercer cuadrado
 	Vertice v9 = {
 		vec3(-0.7f,-0.2f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v10 = {
 		vec3(0.7f,-0.2f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v11 = {
 		vec3(0.7f,-0.3f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v12 = {
 		vec3(-0.7f,-0.3f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 
 	//Cuarto Cuadrado
 	Vertice v13 = {
 		vec3(-0.6f,-0.1f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v14 = {
 		vec3(0.6f,-0.1f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v15 = {
 		vec3(0.6f,-0.2f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v16 = {
 		vec3(-0.6f,-0.2f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 
 	//Quinto Cuadrado
 	Vertice v17 = {
 		vec3(-0.5f,0.0f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v18 = {
 		vec3(0.5f,0.0f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v19 = {
 		vec3(0.5f,-0.1f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v20 = {
 		vec3(-0.5f,-0.1f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 
 	//Sexto Cuadrado
 	Vertice v21 = {
 		vec3(-0.4f,0.1f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v22 = {
 		vec3(0.4f,0.1f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v23 = {
 		vec3(0.4f,0.0f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v24 = {
 		vec3(-0.4f,0.0f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 
 	//Septimo Cuadrado
 	Vertice v25 = {
 		vec3(-0.3f,0.2f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v26 = {
 		vec3(0.3f,0.2f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v27 = {
 		vec3(0.3f,0.1f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v28 = {
 		vec3(-0.3f,0.1f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 
 	//Octavo Cuadrado
 	Vertice v29 = {
 		vec3(-0.2f,0.3f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v30 = {
 		vec3(0.2f,0.3f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v31 = {
 		vec3(0.2f,0.2,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v32 = {
 		vec3(-0.2f,0.2f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 
 	//Noveno Cuadrado
 	Vertice v33 = {
 		vec3(-0.1f,0.4f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v34 = {
 		vec3(0.1f,0.4f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v35 = {
 		vec3(0.1f,0.3f,0.0f),
-		vec4(0.1f,0.8f,0.2f,1.0f)
+		vec4(0.5f,0.10f,0.5f,1.0f)
 	};
 	Vertice v36 = {
 		vec3(-0.1f,0.3f,0.0f),
+		vec4(0.5f,0.10f,0.5f,1.0f)
+	};
+
+	//Decimo Cuadrado
+	Vertice v37 = {
+		vec3(-1.0f,-1.0f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v38 = {
+		vec3(1.0f,-1.0f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v39 = {
+		vec3(1.0f,-0.50f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v40 = {
+		vec3(-1.0f,-0.50f,0.0f),
 		vec4(0.1f,0.8f,0.2f,1.0f)
 	};
 
@@ -243,8 +265,14 @@ void inicializarCuadrado() {
 	cuadrado.push_back(v35);
 	cuadrado.push_back(v36);
 
+	cuadrado.push_back(v37);
+	cuadrado.push_back(v38);
+	cuadrado.push_back(v39);
+	cuadrado.push_back(v40);
+
 	
 }
+
 
 void inicializarTriangulo() {
 	Vertice v1 = {
