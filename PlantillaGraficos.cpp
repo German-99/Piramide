@@ -90,6 +90,114 @@ void inicializarCuadrado() {
 		vec4(0.1f,0.8f,0.2f,1.0f)
 	};
 
+	//Cuarto Cuadrado
+	Vertice v13 = {
+		vec3(-0.6f,-0.1f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v14 = {
+		vec3(0.6f,-0.1f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v15 = {
+		vec3(0.6f,-0.2f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v16 = {
+		vec3(-0.6f,-0.2f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+
+	//Quinto Cuadrado
+	Vertice v17 = {
+		vec3(-0.5f,0.0f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v18 = {
+		vec3(0.5f,0.0f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v19 = {
+		vec3(0.5f,-0.1f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v20 = {
+		vec3(-0.5f,-0.1f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+
+	//Sexto Cuadrado
+	Vertice v21 = {
+		vec3(-0.4f,0.1f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v22 = {
+		vec3(0.4f,0.1f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v23 = {
+		vec3(0.4f,0.0f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v24 = {
+		vec3(-0.4f,0.0f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+
+	//Septimo Cuadrado
+	Vertice v25 = {
+		vec3(-0.3f,0.2f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v26 = {
+		vec3(0.3f,0.2f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v27 = {
+		vec3(0.3f,0.1f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v28 = {
+		vec3(-0.3f,0.1f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+
+	//Octavo Cuadrado
+	Vertice v29 = {
+		vec3(-0.2f,0.3f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v30 = {
+		vec3(0.2f,0.3f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v31 = {
+		vec3(0.2f,0.2,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v32 = {
+		vec3(-0.2f,0.2f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+
+	//Noveno Cuadrado
+	Vertice v33 = {
+		vec3(-0.1f,0.4f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v34 = {
+		vec3(0.1f,0.4f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v35 = {
+		vec3(0.1f,0.3f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+	Vertice v36 = {
+		vec3(-0.1f,0.3f,0.0f),
+		vec4(0.1f,0.8f,0.2f,1.0f)
+	};
+
 	cuadrado.push_back(v1);
 	cuadrado.push_back(v2);
 	cuadrado.push_back(v3);
@@ -105,6 +213,37 @@ void inicializarCuadrado() {
 	cuadrado.push_back(v11);
 	cuadrado.push_back(v12);
 
+	cuadrado.push_back(v13);
+	cuadrado.push_back(v14);
+	cuadrado.push_back(v15);
+	cuadrado.push_back(v16);
+
+	cuadrado.push_back(v17);
+	cuadrado.push_back(v18);
+	cuadrado.push_back(v19);
+	cuadrado.push_back(v20);
+
+	cuadrado.push_back(v21);
+	cuadrado.push_back(v22);
+	cuadrado.push_back(v23);
+	cuadrado.push_back(v24);
+
+	cuadrado.push_back(v25);
+	cuadrado.push_back(v26);
+	cuadrado.push_back(v27);
+	cuadrado.push_back(v28);
+
+	cuadrado.push_back(v29);
+	cuadrado.push_back(v30);
+	cuadrado.push_back(v31);
+	cuadrado.push_back(v32);
+
+	cuadrado.push_back(v33);
+	cuadrado.push_back(v34);
+	cuadrado.push_back(v35);
+	cuadrado.push_back(v36);
+
+	
 }
 
 void inicializarTriangulo() {
@@ -129,9 +268,7 @@ void dibujar() {
 	//Elegir shader
 	shader->enlazar();
 	//Elegor el vertex array
-	glBindVertexArray(vertexArrayTrianguloID);
-	//Dibujar
-	glDrawArrays(GL_TRIANGLES, 0, triangulo.size());
+
 
 	//Proceso dibujo de cuadrado
 	glBindVertexArray(vertexArrayCuadradoID);
